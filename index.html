@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Toggle buttton</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://kit.fontawesome.com/758b365f49.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div class="toggle-bar">
+        <div class="lock-icon">
+            <i class="fa-solid fa-unlock"></i>
+        </div>
+    </div>
+    <script>
+        const toggleBtn = document.querySelector('.toggle-bar'),
+        lockIcon =  document.querySelector('.lock-icon i');
+
+        toggleBtn.addEventListener('click', ()=>{
+            toggleBtn.classList.toggle("active");
+
+            if(toggleBtn.classList.contains("active")){
+                lockIcon.classList.replace("fa-solid fa-unlock","fa-solid fa-lock");
+            }
+
+        });
+    </script>
+    
+</body>
+</html>
